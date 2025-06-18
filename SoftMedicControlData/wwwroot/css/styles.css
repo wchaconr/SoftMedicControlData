@@ -1,0 +1,25 @@
+﻿body {
+    background-color: var(--gris-claro);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: var(--azul-suave);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+    .header img {
+        height: 60px;
+        vertical-align: middle;
+    }
+
+    .header h1 {
+        display: inline-block;
+        margin-left: 15px;
+        vertical-align: middle;
+    }

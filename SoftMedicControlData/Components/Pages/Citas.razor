@@ -1,0 +1,180 @@
+﻿@page "/Citas" 
+@using Microsoft.AspNetCore.Components.Forms
+
+<PageTitle>Gestión de Citas</PageTitle>
+
+@attribute [StreamRendering]
+@rendermode InteractiveServer
+
+<style>
+
+    :root {
+        --azul-suave: #6C8EBF;
+        --verde-agua: #7FCDCD;
+        --gris-claro: #F0F4F8;
+    }
+
+    body {
+        background-color: var(--gris-claro);
+    }
+
+    .container {
+        padding: 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    h2 {
+        color: var(--azul-suave);
+        margin-bottom: 20px;
+    }
+
+    .calendar-section, .form-section, .list-section {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: var(--gris-claro);
+    }
+
+    .btn {
+        background-color: var(--verde-agua);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: #66baba;
+    }
+
+    .popup {
+        position: fixed;
+        top: 30%;
+        left: 40%;
+        background-color: white;
+        border: 2px solid var(--azul-suave);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        z-index: 1000;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+</style>
+
+<div class="header">
+    <img src="/images/logo-softmedic.png" alt="Logo SoftMedic" />
+    <h1>Citas</h1>
+</div>
+
+<div class="container">
+
+    <!-- Calendario -->
+    <div class="calendar-section">
+        <h3>Calendario</h3>
+        <select @bind="vistaCalendario" class="form-group">
+            <option>Mensual</option>
+            <option>Semanal</option>
+            <option>Diario</option>
+        </select>
+        <p>🗓 Vista seleccionada: <strong>@vistaCalendario</strong> (aquí trngo que integrar un componente de calendario )</p>
+    </div>
+
+    <!-- Formulario de cita -->
+    <div class="form-section">
+        <h3>Programar Cita</h3>
+        <EditForm Model="@cita" OnValidSubmit="GuardarCita" FormName="formCita">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="form-group">
+                <label>Médico</label>
+                <InputText @bind-Value="cita.Medico" />
+            </div>
+            <div class="form-group">
+                <label>Paciente</label>
+                <InputText @bind-Value="cita.Paciente" />
+            </div>
+            <div class="form-group">
+                <label>Fecha</label>
+                <InputDate @bind-Value="cita.Fecha" />
+            </div>
+            <div class="form-group">
+                <label>Hora</label>
+                <InputTime @bind-Value="cita.Hora" />
+            </div>
+
+            <div class="form-group">
+                <label>Motivo</label>
+                <InputTextArea @bind-Value="cita.Motivo" />
+            </div>
+            <button type="submit" class="btn">Guardar Cita</button>
+        </EditForm>
+    </div>
+
+    <!-- Lista de citas -->
+    <div class="list-section">
+        <h3>Citas Agendadas</h3>
+        <InputText placeholder="Filtrar por médico o paciente" @bind-Value="filtro" class="form-group" />
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Médico</th>
+                    <th>Paciente</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var c in citas.Where(c => string.IsNullOrEmpty(filtro) || 
+                                                    c.Medico.Contains(filtro, StringComparison.OrdinalIgnoreCase) || 
+                                                    c.Paciente.Contains(filtro, StringComparison.OrdinalIgnoreCase)))
+                {
+                    <tr>
+                        <td>@c.Medico</td>
+                        <td>@c.Paciente</td>
+                        <td>@c.Fecha.ToShortDateString()</td>
+                        <td>@c.Hora.ToString(@"hh\:mm")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@if (mostrarPopup)
+{
+    <div class="overlay" @onclick="()=>mostrarPopup = false"></div>
+    <div class="popup">
+        <p>✅ ¡Cita registrada con éxito!</p>
+        <button class="btn" @onclick="()=>mostrarPopup = false">Cerrar</button>
+    </div>
+}

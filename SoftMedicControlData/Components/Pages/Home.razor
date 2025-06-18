@@ -1,0 +1,113 @@
+﻿@page "/"
+
+@* Página principal del frontend Blazor para SoftMedic *@
+
+@rendermode InteractiveServer
+
+<PageTitle>Inicio - SoftMedic</PageTitle>
+
+<style>
+
+    :root {
+        --azul-suave: #6C8EBF;
+        --verde-agua: #7FCDCD;
+        --gris-claro: #F0F4F8;
+    }
+
+    .inicio-container {
+        padding: 40px;
+        max-width: 1100px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .logo {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .titulo {
+        color: var(--gris-claro);
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .bienvenida {
+        font-size: 1.2rem;
+        color: #FFFF;
+        margin-bottom: 40px;
+    }
+
+    .links-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .card-link {
+        background-color: var(--gris-claro);
+        border: 2px solid var(--azul-suave);
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        transition: transform 0.2s ease;
+    }
+
+        .card-link:hover {
+            transform: scale(1.05);
+            background-color: var(--verde-agua);
+            color: white;
+            border-color: var(--verde-agua);
+        }
+
+        .card-link img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+    .card-title {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+</style>
+
+<div class="inicio-container">
+
+    <img src="/images/logo-softmedic.png" alt="SoftMedic Logoasdasd" />
+
+    <div class="header">
+        <div class="titulo">Bienvenido a SoftMedic</div>
+        <div class="bienvenida">
+            Sistema de gestión de información para consultorios médicos.<br />
+            Selecciona una sección para empezar:
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="links-grid">
+        <NavLink class="card-link" href="/pacientes">
+            <img src="/images/Pacientes.png" alt="Pacientes" />
+            <div class="card-title">Pacientes</div>
+        </NavLink>
+
+        <NavLink class="card-link" href="/citas">
+            <img src="/images/Citas.png" alt="Citas" />
+            <div class="card-title">Citas</div>
+        </NavLink>
+
+        <NavLink class="card-link" href="/medicos">
+            <img src="/images/Medicos.png" alt="Médicos" />
+            <div class="card-title">Médicos</div>
+        </NavLink>
+
+        <NavLink class="card-link" href="/historia-clinica">
+            <img src="/images/Historias.png" alt="Historia Clínica" />
+            <div class="card-title">Historia Clínica</div>
+        </NavLink>
+    </div>
+</div>

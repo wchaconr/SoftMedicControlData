@@ -1,0 +1,192 @@
+﻿@page "/historia-clinica"
+
+@rendermode InteractiveServer
+
+@using Microsoft.AspNetCore.Components.Forms
+
+<PageTitle>Historia Clínica</PageTitle>
+
+<style>
+
+    :root {
+        --azul-suave: #6C8EBF;
+        --verde-agua: #7FCDCD;
+        --gris-claro: #F0F4F8;
+    }
+
+    .container {
+        padding: 30px;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    h2 {
+        color: var(--azul-suave);
+        margin-bottom: 20px;
+    }
+
+    .section {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: var(--gris-claro);
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+
+    .btn {
+        background-color: var(--verde-agua);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+        .btn:hover {
+            background-color: #66baba;
+        }
+
+    .files-list {
+        margin-top: 10px;
+    }
+
+    .file-item {
+        font-size: 0.9rem;
+        color: #444;
+        margin-bottom: 4px;
+    }
+
+    .history-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .history-table th, .history-table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .history-table th {
+            background-color: var(--azul-suave);
+            color: white;
+        }
+</style>
+
+<div class="header">
+    <img src="/images/logo-softmedic.png" alt="Logo SoftMedic" />
+    <h1>Historias clínicas</h1>
+</div>
+
+<div class="container">
+
+    <!-- Registro -->
+    <div class="section">
+        <h3>Registrar Nueva Historia Clínica</h3>
+
+        <div class="form-group">
+            <label>Paciente</label>
+            <select @bind="historia.Paciente">
+                <option disabled selected>Seleccione un paciente</option>
+                @foreach (var p in pacientes)
+                {
+                    <option>@p</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Cita</label>
+            <select @bind="historia.CitaID">
+                <option disabled selected>Seleccione una cita</option>
+                @foreach (var c in citas)
+                {
+                    <option value="@c.Id">@c.Fecha.ToShortDateString() - @c.Medico</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Notas médicas</label>
+            <textarea @bind="historia.Notas"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Adjuntar documentos (PDF, imágenes)</label>
+            <InputFile OnChange="HandleFileUpload" multiple />
+            <div class="files-list">
+                @foreach (var file in archivosAdjuntos)
+                {
+                    <div class="file-item">@file.Name</div>
+                }
+            </div>
+        </div>
+
+        <button class="btn" @onclick="GuardarHistoria">Guardar Historia</button>
+    </div>
+
+    <!-- Visualización -->
+    <div class="section">
+        <h3>Buscar Historias Clínicas</h3>
+
+        <div class="form-group">
+            <label>Filtrar por paciente</label>
+            <select @bind="pacienteFiltro">
+                <option disabled selected>Seleccione un paciente</option>
+                @foreach (var p in pacientes)
+                {
+                    <option>@p</option>
+                }
+            </select>
+        </div>
+
+        @if (!string.IsNullOrEmpty(pacienteFiltro))
+        {
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Médico</th>
+                        <th>Notas</th>
+                        <th>Adjuntos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var h in historias.Where(h => h.Paciente == pacienteFiltro))
+                    {
+                        <tr>
+                            <td>@h.Fecha.ToShortDateString()</td>
+                            <td>@h.Medico</td>
+                            <td>@h.Notas</td>
+                            <td>@(h.Archivos?.Count ?? 0) archivo(s)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+

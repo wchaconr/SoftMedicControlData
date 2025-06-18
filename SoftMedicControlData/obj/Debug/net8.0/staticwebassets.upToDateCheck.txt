@@ -1,0 +1,10 @@
+wwwroot\app.css
+wwwroot\bootstrap\bootstrap.min.css
+wwwroot\bootstrap\bootstrap.min.css.map
+wwwroot\css\styles.css
+wwwroot\favicon.png
+wwwroot\images\Citas.png
+wwwroot\images\Historias.png
+wwwroot\images\logo-softmedic.png
+wwwroot\images\Medicos.png
+wwwroot\images\Pacientes.png
