@@ -1,8 +1,12 @@
 ﻿@page "/historia-clinica"
+@using Microsoft.AspNetCore.Components.Forms
 
 @rendermode InteractiveServer
+@attribute [StreamRendering]
 
-@using Microsoft.AspNetCore.Components.Forms
+@inject HistoriaClinicaServices historiaClinicaService
+@inject PacienteService pacienteService
+@using SoftMedicControlData.Services
 
 <PageTitle>Historia Clínica</PageTitle>
 
@@ -16,7 +20,7 @@
 
     .container {
         padding: 30px;
-        max-width: 1100px;
+        max-width: 1400px;
         margin: auto;
     }
 
@@ -28,14 +32,49 @@
     .section {
         background-color: white;
         border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         padding: 20px;
         margin-bottom: 30px;
     }
 
-    .form-group {
-        margin-bottom: 15px;
+    .section_buttons {
+        display: flex;
+        justify-content: center; 
+        gap: 10px; 
+        margin: 15px 0; 
     }
+
+        .section_buttons .btn {
+            min-width: 120px; 
+        }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+            .form-group input:focus,
+            .form-group textarea:focus,
+            .form-group select:focus {
+                border-color: var(--verde-agua);
+                outline: none;
+            }
 
     label {
         font-weight: bold;
@@ -93,6 +132,25 @@
             background-color: var(--azul-suave);
             color: white;
         }
+
+    .overlay {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    .popup {
+        position: fixed;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        z-index: 1000;
+        text-align: center;
+    }
 </style>
 
 <div class="header">
@@ -102,91 +160,161 @@
 
 <div class="container">
 
-    <!-- Registro -->
-    <div class="section">
-        <h3>Registrar Nueva Historia Clínica</h3>
+    <div class="section_buttons">
+        <button class="btn btn-sm btn-primary" @onclick="() => AbrirVentanaNuevaHistoria()" style="background-color: deepskyblue">
+            <i class="fa-solid fa-plus"> NUEVA</i>
+        </button>
 
-        <div class="form-group">
-            <label>Paciente</label>
-            <select @bind="historia.Paciente">
-                <option disabled selected>Seleccione un paciente</option>
-                @foreach (var p in pacientes)
-                {
-                    <option>@p</option>
-                }
-            </select>
+        <button class="btn btn-sm btn-primary" @onclick="() => AbrirVentanaConsultarHistoria()" style="background-color: deepskyblue">
+            <i class="fa-solid fa-magnifying-glass"> CONSULTAR</i>
+        </button>
+    </div>
+
+    @if (ventanaNuevaHistoriaVisible == true)
+    {
+        <!-- Registro -->
+        <div class="section">
+            <h2>Registrar Nueva Historia Clínica</h2>
+
+            <EditForm Model="@historiaClinica" OnValidSubmit="GuardarMedico">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="form-group">
+                    <label>ID Paciente</label>
+                    <InputNumber @bind-Value="historiaClinica.CedulaPaciente" />
+                </div>
+
+                <div class="form-group">
+                    <label>Fecha</label>
+                    <InputDate @bind-Value="historiaClinica.Fecha" />
+                </div>
+
+                <div class="form-group">
+                    <label>Diagnostico</label>
+                    <InputTextArea @bind-Value="historiaClinica.Diagnostico" />
+                </div>
+
+                <div class="form-group">
+                    <label>Tratamiento</label>
+                    <InputTextArea @bind-Value="historiaClinica.Tratamientos" />
+                </div>
+
+                <div class="form-group">
+                    <label>Notas</label>
+                    <InputTextArea @bind-Value="historiaClinica.Notas" />
+                </div>
+
+                <button type="submit" class="btn">Guardar historia</button>
+            </EditForm>
+           
         </div>
+    }
 
-        <div class="form-group">
-            <label>Cita</label>
-            <select @bind="historia.CitaID">
-                <option disabled selected>Seleccione una cita</option>
-                @foreach (var c in citas)
-                {
-                    <option value="@c.Id">@c.Fecha.ToShortDateString() - @c.Medico</option>
-                }
-            </select>
-        </div>
+    
+    @if(ventanaConsultaHistoriaVisible == true)
+    {
+        <!-- Visualización -->
+        <div class="section">
+            <h2>Buscar Historias Clínicas</h2>
 
-        <div class="form-group">
-            <label>Notas médicas</label>
-            <textarea @bind="historia.Notas"></textarea>
-        </div>
+            <div class="filter-group">
 
-        <div class="form-group">
-            <label>Adjuntar documentos (PDF, imágenes)</label>
-            <InputFile OnChange="HandleFileUpload" multiple />
-            <div class="files-list">
-                @foreach (var file in archivosAdjuntos)
-                {
-                    <div class="file-item">@file.Name</div>
-                }
+                <div class="form-group">
+                    <label>Por Id paciente</label>
+                    <InputNumber placeholder="Buscar por documento paciente" @bind-Value="filtroDocumentoPaciente" />
+                </div>
+
+                @if (historiaClinicaEncontrada != null)
+                {                    
+                    <div class="form-group">
+                        <button @onclick="() => editarHistoria()" class="btn btn-success" style="background-color: lightseagreen">
+                            <i class="fa fa-edit"> Editar</i>
+                        </button>
+                    </div>
+                }                    
+
             </div>
+
         </div>
 
-        <button class="btn" @onclick="GuardarHistoria">Guardar Historia</button>
-    </div>
+        @if (historiaClinicaEncontrada != null)
+            {
+                <div class="section">
+                    <h2>Historia encontrada</h2>
 
-    <!-- Visualización -->
-    <div class="section">
-        <h3>Buscar Historias Clínicas</h3>
+                    <div class="form-group">
+                        <label> Id Paciente</label>
+                        <InputNumber @bind-Value="historiaClinicaEncontrada.CedulaPaciente" disabled="@(!modoEdicion)" />
+                    </div>
 
-        <div class="form-group">
-            <label>Filtrar por paciente</label>
-            <select @bind="pacienteFiltro">
-                <option disabled selected>Seleccione un paciente</option>
-                @foreach (var p in pacientes)
-                {
-                    <option>@p</option>
-                }
-            </select>
-        </div>
+                    <div class="form-group">
+                        <label> Nombre paciente</label>
+                        <InputText @bind-Value="nombreCompletoPaciente" disabled="true" />
+                    </div>
 
-        @if (!string.IsNullOrEmpty(pacienteFiltro))
-        {
-            <table class="history-table">
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Médico</th>
-                        <th>Notas</th>
-                        <th>Adjuntos</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var h in historias.Where(h => h.Paciente == pacienteFiltro))
+                    <div class="form-group">
+                        <label>Fecha</label>
+                        <InputDate @bind-Value="historiaClinicaEncontrada.Fecha" disabled="@(!modoEdicion)" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Diagnostico</label>
+                        <InputTextArea @bind-Value="historiaClinicaEncontrada.Diagnostico" disabled="@(!modoEdicion)" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tratamiento</label>
+                        <InputTextArea @bind-Value="historiaClinicaEncontrada.Tratamientos" disabled="@(!modoEdicion)" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Notas</label>
+                        <InputTextArea @bind-Value="historiaClinicaEncontrada.Notas" disabled="@(!modoEdicion)" />
+                    </div>
+
+                    @* <div class="form-group">
+                        <label>Adjuntar documentos (PDF, imágenes)</label>
+                        <InputFile OnChange="HandleFileUpload" multiple />
+                        <div class="files-list">
+                            @foreach (var file in archivosAdjuntos)
+                            {
+                                <div class="file-item">@file.Name</div>
+                            }
+                        </div>
+                    </div> *@
+
+                    @if (modoEdicion == true)
                     {
-                        <tr>
-                            <td>@h.Fecha.ToShortDateString()</td>
-                            <td>@h.Medico</td>
-                            <td>@h.Notas</td>
-                            <td>@(h.Archivos?.Count ?? 0) archivo(s)</td>
-                        </tr>
+                        <button @onclick="() => GuardarCambios()" class="btn btn-success" style="background-color: lightseagreen">
+                            <i class="fas fa-save"></i> Guardar
+                        </button>
+
+                        <button @onclick="() => CerrarEdit()" class="btn btn-secondary" style="background-color: lightcoral">
+                            <i class="fa-solid fa-xmark"></i> Cancelar
+                        </button>
                     }
-                </tbody>
-            </table>
-        }
+                
+                </div>  
+
+            } 
+    }
+
+    @if (mostrarPopup)
+{
+    <div class="overlay" @onclick="()=>mostrarPopup = false"></div>
+    <div class="popup">
+            @if (historiaRegistradaOK)
+            {
+                <p>✅ ¡Cita registrada con éxito!</p>
+            }
+            @if (historiaEditadaOK)
+            {
+                <p>✅ ¡Cita editada con éxito!</p>
+            }
+        <button class="btn" @onclick="()=>mostrarPopup = false">Cerrar</button>
     </div>
+} 
 </div>
 
 

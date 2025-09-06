@@ -1,64 +1,126 @@
-using Microsoft.AspNetCore.Components.Forms;
+using SoftMedicControlData.Models;
 
 namespace SoftMedicControlData.Components.Pages
 {
     public partial class HistoriaClinica
     {
-        public class Historia_Clinica
+        private HistorialMedico historiaClinica = new();
+        private HistorialMedico? historiaClinicaEncontrada = null;
+        private HistorialMedico? historiaClinicaEditada = null;
+        private Paciente pacienteEncontrado = new();
+        private string nombreCompletoPaciente = "";
+
+        // Variables de estado
+        private bool ventanaNuevaHistoriaVisible = false;
+        private bool ventanaConsultaHistoriaVisible = false;
+        private bool modoEdicion = false;
+        private bool mostrarPopup = false;
+        private bool historiaRegistradaOK = false;
+        private bool historiaEditadaOK = false;
+
+        // Filtros
+        private int? _filtroDocumentoPaciente;
+        public int? filtroDocumentoPaciente
         {
-            public string Paciente { get; set; }
-            public int CitaID { get; set; }
-            public DateTime Fecha { get; set; } = DateTime.Now;
-            public string Medico { get; set; }
-            public string Notas { get; set; }
-            public List<IBrowserFile> Archivos { get; set; } = new();
-        }
-
-        public class Cita
-        {
-            public int Id { get; set; }
-            public string Medico { get; set; }
-            public DateTime Fecha { get; set; }
-        }
-
-        private List<string> pacientes = new() { "Juan Pérez", "Ana Gómez", "Carlos Torres" };
-        private List<Cita> citas = new()
-    {
-        new Cita { Id = 1, Medico = "Dra. Ramírez", Fecha = DateTime.Today },
-        new Cita { Id = 2, Medico = "Dr. Díaz", Fecha = DateTime.Today.AddDays(1) }
-    };
-
-        private Historia_Clinica historia = new();
-        private List<Historia_Clinica> historias = new();
-        private List<IBrowserFile> archivosAdjuntos = new();
-        private string pacienteFiltro;
-
-        private void HandleFileUpload(InputFileChangeEventArgs e)
-        {
-            archivosAdjuntos = e.GetMultipleFiles().ToList();
-            historia.Archivos = archivosAdjuntos;
-        }
-
-        private void GuardarHistoria()
-        {
-            var cita = citas.FirstOrDefault(c => c.Id == historia.CitaID);
-            if (cita != null)
+            get => _filtroDocumentoPaciente;
+            set
             {
-                historia.Medico = cita.Medico;
+                if (_filtroDocumentoPaciente != value)
+                {
+                    _filtroDocumentoPaciente = value;
+                    _ = Get_HistorialMedico();
+                }
             }
+        }
 
-            historias.Add(new Historia_Clinica
+        protected override async Task OnInitializedAsync()
+        {
+            //await CargarMedicos();
+        }
+
+        private async Task Get_HistorialMedico()
+        {
+            if (filtroDocumentoPaciente == null)
+                return;
+            else
             {
-                Paciente = historia.Paciente,
-                CitaID = historia.CitaID,
-                Fecha = DateTime.Now,
-                Medico = historia.Medico,
-                Notas = historia.Notas,
-                Archivos = new List<IBrowserFile>(historia.Archivos)
-            });
+                historiaClinicaEncontrada = await historiaClinicaService.Get_HistorialMedicoPorCedulaPaciente(Convert.ToInt32(filtroDocumentoPaciente));
+                if (historiaClinicaEncontrada != null)
+                {
+                    pacienteEncontrado = await pacienteService.Get_PacientePorCedula(historiaClinicaEncontrada.CedulaPaciente);
+                    nombreCompletoPaciente = $"{pacienteEncontrado.Nombre} {pacienteEncontrado.Apellido}";
+                    StateHasChanged();
+                }
+            } 
+        }
 
-            historia = new();
-            archivosAdjuntos.Clear();
+        private async Task GuardarMedico()
+        {
+            await historiaClinicaService.Add_RegistroHistorialMedico(historiaClinica);
+
+            //await CargarCitas();
+            mostrarPopup = true;
+            historiaEditadaOK = false;
+            historiaRegistradaOK = true;
+
+            LimpiarFormulario();
+        }
+
+        private void LimpiarFormulario()
+        {
+            historiaClinica = new HistorialMedico();
+            // Actualizar UI
+            StateHasChanged();
+        }
+
+        private void CerrarEdit()
+        {
+            modoEdicion = false;
+        }
+
+        private void editarHistoria()
+        {
+            modoEdicion = true;
+        }
+
+        private async Task GuardarCambios()
+        {
+            try
+            {
+                if (historiaClinicaEncontrada != null)
+                {
+                    // Guardar en BD
+                    await historiaClinicaService.Update_RegistroHistorialMedico(historiaClinicaEncontrada);
+
+                    //await CargarCitas();
+                    mostrarPopup = true;
+                    historiaEditadaOK = true;
+                    historiaRegistradaOK = false;
+
+                    LimpiarFormulario();
+                }
+                else return;
+
+            }
+            catch (Exception ex)
+            {
+                // Manejar error (opcional)
+                Console.WriteLine($"Error al guardar: {ex.Message}");
+            }
+        }
+
+        private void AbrirVentanaNuevaHistoria()
+        {
+            ventanaNuevaHistoriaVisible = true;
+            ventanaConsultaHistoriaVisible = false;
+            modoEdicion = false;
+        }
+
+        private void AbrirVentanaConsultarHistoria()
+        {
+            ventanaConsultaHistoriaVisible = true;
+            ventanaNuevaHistoriaVisible = false;
+            modoEdicion = false;
         }
     }
 }

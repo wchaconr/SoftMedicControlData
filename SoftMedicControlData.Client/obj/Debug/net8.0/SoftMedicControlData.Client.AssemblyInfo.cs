@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SoftMedicControlData.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d7d1bc4d98c83c52c04f86a24bd7ec7f4b7aa75")]
 [assembly: System.Reflection.AssemblyProductAttribute("SoftMedicControlData.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SoftMedicControlData.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

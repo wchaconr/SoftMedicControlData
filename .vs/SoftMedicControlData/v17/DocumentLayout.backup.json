@@ -3,24 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\services\\historiaclinicaservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\services\\historiaclinicaservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\pacientes.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\pages\\pacientes.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\pacientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\pages\\pacientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\citas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\pages\\citas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\citas.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\pages\\citas.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\historiaclinica.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\pages\\historiaclinica.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\historiaclinica.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\pages\\historiaclinica.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\shared\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\shared\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\medicos.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\pages\\medicos.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\medicos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\pages\\medicos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\pacientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\pages\\pacientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -29,22 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\citas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\pages\\citas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\pages\\historiaclinica.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\pages\\historiaclinica.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|c:\\users\\usuario\\source\\repos\\softmediccontroldata\\softmediccontroldata\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6D1528DA-5BCA-4B21-BE12-1C9071070A87}|SoftMedicControlData\\SoftMedicControlData.csproj|solutionrelative:softmediccontroldata\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,46 +78,213 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Routes.razor",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Routes.razor",
-              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Routes.razor",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Routes.razor",
-              "RelativeToolTip": "SoftMedicControlData\\Components\\Routes.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Shared\\Result.cs",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Shared\\Result.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Shared\\Result.cs",
+              "RelativeToolTip": "SoftMedicControlData\\Shared\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T00:56:04.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HistoriaClinica.razor",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\HistoriaClinica.razor",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\HistoriaClinica.razor",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\HistoriaClinica.razor",
+              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\HistoriaClinica.razor",
+              "ViewState": "AgIAACIBAAAAAAAAAAAAwDQBAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-15T18:45:05.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-14T22:37:09.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HistoriaClinica.razor.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\HistoriaClinica.razor.cs",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\HistoriaClinica.razor.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\HistoriaClinica.razor.cs",
+              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\HistoriaClinica.razor.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAYwFwAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T17:48:45.821Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\App.razor",
-              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\App.razor",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\App.razor",
-              "RelativeToolTip": "SoftMedicControlData\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
+              "Title": "HistoriaClinicaServices.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Services\\HistoriaClinicaServices.cs",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Services\\HistoriaClinicaServices.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Services\\HistoriaClinicaServices.cs",
+              "RelativeToolTip": "SoftMedicControlData\\Services\\HistoriaClinicaServices.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAcwGMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T00:13:15.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PacienteService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Services\\PacienteService.cs",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Services\\PacienteService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Services\\PacienteService.cs",
+              "RelativeToolTip": "SoftMedicControlData\\Services\\PacienteService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwCoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T02:22:51.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Citas.razor",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Citas.razor",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Citas.razor",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Citas.razor",
+              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Citas.razor",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAH4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-15T18:44:58.459Z",
+              "WhenOpened": "2025-06-14T18:05:46.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Citas.razor.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Citas.razor.cs",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Citas.razor.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Citas.razor.cs",
+              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Citas.razor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T16:43:12.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Medicos.razor",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Medicos.razor",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Medicos.razor",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Medicos.razor",
+              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Medicos.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-14T19:57:49.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Medicos.razor.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Medicos.razor.cs",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Medicos.razor.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Medicos.razor.cs",
+              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Medicos.razor.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAkwIcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T01:54:21.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pacientes.razor",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Pacientes.razor",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Pacientes.razor",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Pacientes.razor",
+              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Pacientes.razor",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAO0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-13T02:40:18.31Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\_Imports.razor",
-              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\_Imports.razor",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\_Imports.razor",
-              "RelativeToolTip": "SoftMedicControlData\\Components\\_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-15T18:44:55.65Z",
+              "Title": "Pacientes.razor.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Pacientes.razor.cs",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Pacientes.razor.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Pacientes.razor.cs",
+              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Pacientes.razor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T02:57:45.665Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Paciente.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Models\\Paciente.cs",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Models\\Paciente.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Models\\Paciente.cs",
+              "RelativeToolTip": "SoftMedicControlData\\Models\\Paciente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:38:13.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "SoftMedicControlData\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T18:21:38.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Program.cs",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Program.cs",
+              "RelativeToolTip": "SoftMedicControlData\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T02:25:49.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-14T17:57:27.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Login.razor",
+              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Login.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-14T16:00:24.279Z"
             },
             {
               "$type": "Document",
@@ -103,101 +294,9 @@
               "RelativeDocumentMoniker": "SoftMedicControlData\\wwwroot\\css\\styles.css",
               "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\wwwroot\\css\\styles.css",
               "RelativeToolTip": "SoftMedicControlData\\wwwroot\\css\\styles.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-15T18:41:29.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "SoftMedicControlData\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-15T18:21:38.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HistoriaClinica.razor",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\HistoriaClinica.razor",
-              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\HistoriaClinica.razor",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\HistoriaClinica.razor",
-              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\HistoriaClinica.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-14T22:37:09.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Medicos.razor",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Medicos.razor",
-              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Medicos.razor",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Medicos.razor",
-              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Medicos.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-14T19:57:49.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Citas.razor",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Citas.razor",
-              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Citas.razor",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Citas.razor",
-              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Citas.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-14T18:05:46.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Home.razor",
-              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-14T17:57:27.692Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.razor",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Login.razor",
-              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Login.razor",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Login.razor",
-              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Login.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-14T16:00:24.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Pacientes.razor",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Pacientes.razor",
-              "RelativeDocumentMoniker": "SoftMedicControlData\\Components\\Pages\\Pacientes.razor",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\SoftMedicControlData\\SoftMedicControlData\\Components\\Pages\\Pacientes.razor",
-              "RelativeToolTip": "SoftMedicControlData\\Components\\Pages\\Pacientes.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-13T02:40:18.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-15T18:41:29.067Z"
             }
           ]
         }

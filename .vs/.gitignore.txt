@@ -1,0 +1,18 @@
+# Archivos de configuración de usuario
+*.user
+*.userosscache
+*.sln.docstates
+
+# Carpeta de uso interno de Visual Studio
+.vs/
+
+# Archivos de compilación
+bin/
+obj/
+
+# Archivos de NuGet
+packages/
+*.nupkg
+
+# Otros
+_ReSharper.Caches/

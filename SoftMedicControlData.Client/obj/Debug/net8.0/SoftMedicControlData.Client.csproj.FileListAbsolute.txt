@@ -620,6 +620,7 @@ C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\o
 C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\SoftMedicControlData.Client.AssemblyInfo.cs
 C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\SoftMedicControlData.Client.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\SoftMedicControlData.Client.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\SoftMedicControlData.Client.sourcelink.json
 C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Authorization.wasm
 C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.wasm
 C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Forms.wasm
@@ -1020,9 +1021,9 @@ C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\o
 C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\compressed\93kaivwkq6-tptq2av103.gz
 C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\compressed\mtz67mfada-lfu7j35m59.gz
 C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\compressed\cxs7y45oqn-oyz0vx2fzb.gz
-C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\compressed\pz6t4t1cjd-kohnd8ogxg.gz
-C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\compressed\nqxx34rrvm-odeokyun7n.gz
-C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\compressed\lqthql2238-cthal5uudu.gz
+C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\compressed\pz6t4t1cjd-4obzp9f20n.gz
+C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\compressed\nqxx34rrvm-1zeafwa657.gz
+C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\compressed\lqthql2238-jkek5jn9h2.gz
 C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\Usuario\source\repos\SoftMedicControlData\SoftMedicControlData.Client\obj\Debug\net8.0\staticwebassets.development.json

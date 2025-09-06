@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "SoftMedicControlData.Client",
   "resources": {
-    "hash": "sha256-bXw6xDCJTwOl2AK5KOS1puyfhVvopyhwHxeDBEerhp8=",
+    "hash": "sha256-tXnMp4N8QgcDyFjVT9WmrEjOKEe57Q7Pe5vgr8eL+Jk=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-YyxJV6dv935qHoQAmjB+2qRjHeGpm4SyWxE0T/KvsIE="
     },
@@ -209,10 +209,10 @@
       "mscorlib.wasm": "sha256-flmBXVpp8uDpWBNEJuRkqo3Qnir1KADo5a1rCQISkPs=",
       "netstandard.wasm": "sha256-iuCVrIBmiGbXpNVvYkBmSt16BNEjbbD82vYrtHimftc=",
       "System.Private.CoreLib.wasm": "sha256-1Xa/xaUoA/iRxpDqZPUUzL8QaTawkoJLhGmxtRv9ZJI=",
-      "SoftMedicControlData.Client.wasm": "sha256-RIbxOKnugk5VV8+hGEBJYsEEilr+ftJ64ACYrgNeFsI="
+      "SoftMedicControlData.Client.wasm": "sha256-LO3r7nGaNfGY8KU1fKLTGCIV2WZ8wKomN6my7xJ3P+o="
     },
     "pdb": {
-      "SoftMedicControlData.Client.pdb": "sha256-NKUVUtiNOWSFKh5iH8xhwiFHwqFjJHSFFh8PngaCnIo="
+      "SoftMedicControlData.Client.pdb": "sha256-s4ZWbuY8ddXU44Xpva2krrAw9h6RzcSIlr/o0i4OifE="
     }
   },
   "cacheBootResources": true,

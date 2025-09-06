@@ -23,3 +23,65 @@
         margin-left: 15px;
         vertical-align: middle;
     }
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.ventana-flotante {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.ventana-header {
+    background: #2c3e50;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ventana-controles {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-ventana {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.ventana-body {
+    padding: 20px;
+}
+
+.ventana-footer {
+    padding: 15px;
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}

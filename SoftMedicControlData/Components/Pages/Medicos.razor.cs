@@ -1,62 +1,136 @@
-using System.ComponentModel.DataAnnotations;
+using SoftMedicControlData.Models;
 
 namespace SoftMedicControlData.Components.Pages
 {
     public partial class Medicos
     {
-        public class Medico
-        {
-            [Required] public string Nombre { get; set; }
-            [Required] public string Especialidad { get; set; }
-            [Required] public string Email { get; set; }
-            public string Telefono { get; set; }
-        }
-
-        public class Cita
-        {
-            public string Medico { get; set; }
-            public string Paciente { get; set; }
-            public DateTime Fecha { get; set; }
-            public TimeSpan Hora { get; set; }
-            public string Motivo { get; set; }
-        }
-
-        public class Horario
-        {
-            public string Dia { get; set; }
-            public TimeSpan Inicio { get; set; }
-            public TimeSpan Fin { get; set; }
-        }
-
         private Medico medico = new();
-        private List<Medico> medicos = new();
-        private List<Cita> citas = new()
-    {
-        new Cita { Medico = "Dra. Ana Pérez", Paciente = "Carlos Gómez", Fecha = DateTime.Today, Hora = new TimeSpan(10, 30, 0), Motivo = "Control general" }
-    };
+        private List<Medico> listaMedicos = [];
 
-        private string medicoSeleccionado;
-        private Horario nuevoHorario = new();
-        private List<Horario> horariosDisponibles = new();
+        // Variables de estado
+        private bool ventanaVisible = false;
+        private bool ventanaMinimizada = false;
+        private Medico? medicoEditando = null;
 
-        private void GuardarMedico()
+        private bool modoEdicion = false;
+
+        private string filtroNombre = string.Empty;
+        private string filtroDocumento = string.Empty;
+
+        protected override async Task OnInitializedAsync()
         {
-            if (!medicos.Any(m => m.Nombre == medico.Nombre))
-            {
-                medicos.Add(medico);
-            }
-            medico = new(); // Reset
+            await CargarMedicos();
         }
 
-        private void AgregarHorario()
+        private async Task CargarMedicos()
         {
-            horariosDisponibles.Add(new Horario
+            listaMedicos = await medicoService.Get_TodosMedicos();
+        }
+
+        private async Task GuardarMedico()
+        {
+            if (modoEdicion)
             {
-                Dia = nuevoHorario.Dia,
-                Inicio = nuevoHorario.Inicio,
-                Fin = nuevoHorario.Fin
-            });
-            nuevoHorario = new();
+                await medicoService.Update_RegistroMedico(medico);
+            }
+            else
+            {
+                await medicoService.Add_RegistroMedico(medico);
+            }
+
+            await CargarMedicos();
+            LimpiarFormulario();
+        }
+
+        private async Task EliminarMedico(Medico medico)
+        {
+            await medicoService.Delete_RegistroMedico(medico.IdMedico);
+            await CargarMedicos();
+        }
+
+        private void Cancelar()
+        {
+            LimpiarFormulario();
+        }
+
+        private void LimpiarFormulario()
+        {
+            medico = new Medico();
+            modoEdicion = false;
+        }
+
+        private void AbrirVentanaFlotante(Medico medico)
+        {
+            // Clonar medico para edición
+            medicoEditando = new Medico
+            {
+                IdMedico = medico.IdMedico,
+                Nombre = medico.Nombre,
+                Apellido = medico.Apellido,
+                Telefono = medico.Telefono,
+                Especialidad = medico.Especialidad,
+                CorreoElectronico = medico.CorreoElectronico,
+                JornadaAtencion = medico.JornadaAtencion
+            };
+
+            ventanaVisible = true;
+            ventanaMinimizada = false;
+        }
+
+        private void Minimizar()
+        {
+            ventanaMinimizada = !ventanaMinimizada;
+        }
+
+        private void CerrarVentana()
+        {
+            ventanaVisible = false;
+            medicoEditando = null;
+        }
+
+        private async Task GuardarCambios()
+        {
+            if (medicoEditando == null) return;
+
+            try
+            {
+                // Buscar medico original
+                var original = listaMedicos.FirstOrDefault(p =>
+                    p.IdMedico == medicoEditando.IdMedico);
+
+                if (original != null)
+                {
+                    // Actualizar propiedades
+                    original.Nombre = medicoEditando.Nombre;
+                    original.Apellido = medicoEditando.Apellido;
+                    original.Telefono = medicoEditando.Telefono;
+                    original.Especialidad = medicoEditando.Especialidad;
+                    original.CorreoElectronico = medicoEditando.CorreoElectronico;
+                    original.JornadaAtencion = medicoEditando.JornadaAtencion;
+
+                    // Guardar en BD
+                    await medicoService.Update_RegistroMedico(original);
+
+                    // Actualizar UI
+                    StateHasChanged();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar error (opcional)
+                Console.WriteLine($"Error al guardar: {ex.Message}");
+            }
+            finally
+            {
+                CerrarVentana();
+            }
+        }
+        public class VentanaFlotante
+        {
+            public Medico medicoAEditar { get; set; } = new();
+            public string EstiloPosicion { get; set; } = "left:100px; top:100px; z-index:100;";
+            public bool Minimizada { get; set; }
+            public int ZIndex { get; set; } = 100;
         }
     }
 }

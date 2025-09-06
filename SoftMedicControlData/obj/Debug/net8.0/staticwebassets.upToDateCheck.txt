@@ -8,3 +8,4 @@ wwwroot\images\Historias.png
 wwwroot\images\logo-softmedic.png
 wwwroot\images\Medicos.png
 wwwroot\images\Pacientes.png
+wwwroot\js\jsFunctions.js
